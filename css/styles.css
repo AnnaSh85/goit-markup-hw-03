@@ -84,9 +84,11 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  /*outline: 2px solid red;*/
+}
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
-  outline: 2px solid red;
 }
 
 /*site nav*/
@@ -97,8 +99,8 @@ body {
   padding-top: 21px;
   padding-bottom: 21px;
 }
-
-.header-nav .link:focus {
+.header-link:hover,
+.header-link:focus {
   color: var(--accent-color);
 }
 .header-link.current {
@@ -123,13 +125,35 @@ body {
 .address:focus {
   color: var(--accent-color);
 }
-.header-nav,
+.nav-list {
+  display: flex;
+}
+.header-nav-item:not(:first-child) {
+  margin-left: 50px;
+}
+/*contacts-nav*/
 .contacts-nav {
+  display: flex;
+}
+.contacts-nav-item:not(:first-child) {
+  margin-left: 50px;
+}
+
+/*header*/
+.header-main {
   display: flex;
   align-items: center;
 }
-.header-nav-item:not(:last-child) {
-  margin-right: 50px;
+
+.header-main {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.contacts-nav {
+  margin-left: auto;
+}
+.header {
+  border-bottom: 1px solid #ececec;
 }
 
 /*logo*/
@@ -142,22 +166,14 @@ body {
   font-size: 26px;
   line-height: 1.19;
   margin-right: 93px;
+  display: block;
 }
 .logo-blue {
   color: var(--accent-color);
 }
 .logo-footer {
   color: var(--third-title-color);
-}
-.header-main {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-.contacts-nav {
-  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 /*hero*/
@@ -175,6 +191,7 @@ body {
   text-transform: uppercase;
   color: var(--third-title-color);
   display: block;
+  max-width: 696px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
@@ -214,13 +231,17 @@ body {
   border-radius: 4px;
   color: var(--first-btn-color);
   background-color: var(--background-btn-color);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--accent-color);
   color: var(--second-btn-color);
 }
-/*Особенности*/
+/*Fetures*/
 .features-title {
   font-weight: 700;
   font-size: 14px;
@@ -240,23 +261,44 @@ body {
   column-gap: 30px;
 }
 .features-item {
-  width: calc((100% - 90px) / 4);
+  flex-basis: calc((100% - 90px) / 4);
 }
 .features-title {
-  margin-bottom: 26px;
+  margin-bottom: 10px;
 }
+/*Work*/
 .work-list {
   display: flex;
   column-gap: 30px;
+}
+.about-us {
+  padding-top: 0px;
 }
 .work-title {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
-/*Команда*/
-.section-team {
+/*Team*/
+.team {
+  display: flex;
+  gap: 30px;
+}
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.team-item {
+  background: var(--first-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-title {
+  margin-bottom: 50px;
+}
+.team {
   background-color: var(--third-background-color);
 }
 .team-after-title {
@@ -266,6 +308,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-title-color);
+  margin-bottom: 10px;
 }
 .team-tex {
   font-size: 16px;
@@ -273,9 +316,12 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 /*Footer*/
 .footer {
   background-color: var(--second-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-address {
   font-style: normal;
@@ -288,14 +334,42 @@ body {
 .footer-link {
   color: var(--add-title-color);
 }
-
+.footer-nav-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 /*Portfolio*/
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+.filter-item:not(:first-child) {
+  margin-left: 8px;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.projects-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.projects-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-bottom: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+}
 .projects-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--second-title-color);
+  margin-bottom: 4px;
 }
 .projects-text {
   font-size: 16px;
