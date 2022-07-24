@@ -94,10 +94,12 @@ body {
 /*site nav*/
 
 .header-nav-link {
-  color: var(--second-title-color);
   display: block;
   padding-top: 21px;
   padding-bottom: 21px;
+}
+.header-link {
+  color: var(--second-title-color);
 }
 .header-link:hover,
 .header-link:focus {
